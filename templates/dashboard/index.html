@@ -1,0 +1,354 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<title>YPG Security - Admin & Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+	<meta content="Themesdesign" name="author" />
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="{%  static 'images/favicon.ico' %}">
+
+	<!-- jquery.vectormap css -->
+	<!-- <link href="{% static 'libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet" type="text/css" /> -->
+
+	<!-- DataTables -->
+	<link href="{% static 'libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}" rel="stylesheet"
+		type="text/css" />
+
+	<!-- Responsive datatable examples -->
+	<link href="{% static 'libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css' %}" rel="stylesheet"
+		type="text/css" />
+
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+	<!-- Icons Css -->
+	<link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- App Css-->
+	<link href="{% static 'css/app.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="sidebar-enable vertical-collpsed">
+
+	<!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+	<!-- Begin page -->
+	<div id="layout-wrapper">
+
+		{% include '../includes/header.html' %}
+		<!-- ========== Left Sidebar Start ========== -->
+		{% include '../includes/sidenav.html' %}
+		<!-- Left Sidebar End -->
+
+
+
+		<!-- ============================================================== -->
+		<!-- Start right Content here -->
+		<!-- ============================================================== -->
+		<div class="main-content">
+
+			<div class="page-content">
+				<div class="container-fluid">
+
+					<!-- start page title -->
+					<div class="row">
+						<div class="col-12">
+							{% include '../includes/alerts.html' %}
+						</div>
+					</div>
+					<!-- end page title -->
+
+					<div class="row g-2 my-1">
+						<div class="col-4">
+							<div class="shadow-lg bg-white p-3 rounded stat_card">
+								<div class="d-flex align-items-center justify-content-between">
+									<div>
+										<div class="fw-bold fs-5">Number of Employee</div>
+										<div class="fw-bold fs-3">{{ emp_count }}</div>
+									</div>
+									<div>
+										<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+											fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+											<path
+												d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+											<path fill-rule="evenodd"
+												d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+											<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="shadow-lg bg-white p-3 rounded stat_card">
+								<div class="d-flex align-items-center justify-content-between">
+									<div>
+										<div class="fw-bold fs-5">Total Alarm Response</div>
+										<div class="fw-bold fs-3">{{ job_count }}</div>
+									</div>
+									<div>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36"
+											height="36" fill="currentColor">
+											<path fill="none" d="M0 0h24v24H0z" />
+											<path
+												d="M22 13.5V21a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H5v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-7.5l-1.243-.31A1 1 0 0 1 0 12.22v-.72a.5.5 0 0 1 .5-.5h1.929L4.48 6.212A2 2 0 0 1 6.319 5H8V3h3v2h2V3h3v2h1.681a2 2 0 0 1 1.838 1.212L21.571 11H23.5a.5.5 0 0 1 .5.5v.72a1 1 0 0 1-.757.97L22 13.5zM4 15v2a1 1 0 0 0 1 1h3.245a.5.5 0 0 0 .44-.736C7.88 15.754 6.318 15 4 15zm16 0c-2.317 0-3.879.755-4.686 2.264a.5.5 0 0 0 .441.736H19a1 1 0 0 0 1-1v-2zM6 7l-1.451 3.629A1 1 0 0 0 5.477 12h13.046a1 1 0 0 0 .928-1.371L18 7H6z" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="shadow-lg bg-white p-3 rounded stat_card">
+								<div class="d-flex align-items-center justify-content-between">
+									<div>
+										<div class="fw-bold fs-5">Number of Assets</div>
+										<div class="fw-bold fs-3">{{ asset_count }}</div>
+									</div>
+									<div>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36"
+											height="36" fill="currentColor">
+											<path fill="none" d="M0 0h24v24H0z" />
+											<path
+												d="M19 9h-5V4H5v7.857l1.5 1.393L10 9.5l3 5 2-2.5 3 3-3-.5-2 2.5-3-4-3 3.5-2-1.25V20h14V9zm2-1v12.993A1 1 0 0 1 20.007 22H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8z" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row g-3 my-1">
+						<div class="col-6">
+							<div class="bg-white shadow-lg p-3 rounded">
+								<div id="chart"></div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="bg-white shadow-lg p-3 rounded">
+								<div id="chart1"></div>
+							</div>
+						</div>
+						<!-- <div class="col-6">
+                                <div class="bg-white shadow-lg p-3 rounded">
+                                    <div id="options2"></div>
+                                </div>
+                            </div> -->
+					</div>
+
+					<div class="row mt-3">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between align-items-center mb-2">
+										<h5>Recent Job List</h5>
+										<a href="{% url 'view_jobs' %}" class="btn btn-outline-primary btn-sm">All
+											Jobs</a>
+									</div>
+									<table class="table table-striped table-bordered dt-responsive nowrap"
+										style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+										<thead>
+											<tr>
+												<th>Job Name</th>
+												<th>Client Name</th>
+												<th>Address</th>
+												<th>Date Time</th>
+												<th>Status</th>
+												<th>View Report</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											{% for job in jobs %}
+
+											<tr>
+												<td>{{ job.job_no }}</td>
+												<td>{{ job.client_name }}</td>
+												<td>{{ job.address }}</td>
+												<td>{{ job.created_at| date:"D d-M-Y, h:i A" }}</td>
+												<td>
+													<div class="badge badge-soft-success fs-6">{{ job.status }}</div>
+												</td>
+												<td>
+													{% if job.status == "Completed" %}
+													<a href="{% url 'alarm_reponse_report' job.id %}" target="_blank"
+														class="btn btn-outline-primary btn-sm">Report</a>
+													{% endif %}
+												</td>
+											</tr>
+
+											{% endfor %}
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div> <!-- end col -->
+					</div> <!-- end row -->
+				</div>
+				<!-- end row -->
+
+
+			</div>
+
+		</div>
+		<!-- End Page-content -->
+
+		{% include '../includes/footer.html' %}
+
+	</div>
+	<!-- end main content-->
+
+	</div>
+	<!-- END layout-wrapper -->
+
+
+
+
+	<!-- JAVASCRIPT -->
+	<script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+	<!-- <script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script> -->
+	<!-- <script src="{% static 'libs/node-waves/waves.min.js' %}"></script> -->
+
+
+	<!-- apexcharts -->
+	<script src="{% static 'libs/apexcharts/apexcharts.min.js' %}"></script>
+
+
+
+
+
+	<!-- App js -->
+	<script src="{% static 'js/app.js' %}"></script>
+	<script>
+
+		var responseCountList = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		var month = 0;
+		{% for job_chart in job_chart_list %}
+			month =  {{ job_chart.month }}
+			month = Number(month) - 1
+			responseCountList[month] = {{ job_chart.c }};
+		{% endfor %}
+
+		var monthlyCaseOption = {
+			series: [{
+				name: "Job List {% now 'Y' %}",
+				data: responseCountList
+			}],
+			chart: {
+				height: 350,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+			},
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth'
+			},
+			colors: ['#133a5c'],
+
+
+
+			title: {
+				text: 'Monthly Job List {% now "Y" %}',
+				align: 'left'
+			},
+			grid: {
+				row: {
+					colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+					opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+			}
+		};
+
+		var chart = new ApexCharts(document.querySelector("#chart"), monthlyCaseOption);
+		chart.render();
+
+		var responseCountList1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		var j = 0;
+		var month1 = 0;
+		{% for alarm_response in alarm_responses %}
+		    month1 =  {{ alarm_response.month }}
+			month1 = Number(month1) - 1
+			responseCountList1[month1] = {{ alarm_response.c }}
+		{% endfor %}
+
+		var options = {
+			series: [{
+				name: 'Alarm Responses {% now "Y" %}',
+				type: 'column',
+				data: responseCountList1
+			}],
+			chart: {
+				height: 350,
+				type: 'line',
+				stacked: false,
+			},
+			stroke: {
+				width: [0, 2, 5],
+				curve: 'smooth'
+			},
+			plotOptions: {
+				bar: {
+					columnWidth: '50%'
+				}
+			},
+
+			fill: {
+				opacity: [0.85, 0.25, 1],
+				gradient: {
+					inverseColors: false,
+					shade: 'light',
+					type: "vertical",
+					opacityFrom: 0.85,
+					opacityTo: 0.55,
+					stops: [0, 100, 100, 100]
+				}
+			},
+			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+			markers: {
+				size: 0
+			},
+
+			colors: ['#133a5c'],
+
+			title: {
+				text: 'Monthly Alarm Response {% now "Y" %}',
+				align: 'left'
+			},
+			// xaxis: {
+			//   type: 'datetime'
+			// },
+			yaxis: {
+				title: {
+					text: 'Alarm Responses {% now "Y" %}',
+				},
+				min: 0
+			},
+			tooltip: {
+				shared: true,
+				intersect: false,
+
+			}
+		};
+
+
+		var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
+		chart1.render();
+
+
+
+	</script>
+</body>
+
+</html>

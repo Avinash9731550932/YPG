@@ -1,0 +1,1238 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 17, 2022 - 08:19:08
+Django version 3.2.9, using settings 'security.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[17/Oct/2022 08:19:27] "GET / HTTP/1.0" 200 43991
+Not Found: /favicon.ico
+[17/Oct/2022 08:19:27] "GET /favicon.ico HTTP/1.0" 404 3795
+[17/Oct/2022 08:21:41] "GET /accounts/view-employee/ HTTP/1.0" 200 68723
+[17/Oct/2022 08:21:46] "GET /reports/employee_table/ HTTP/1.0" 200 45267
+[17/Oct/2022 08:21:49] "GET /reports/employee-travel-log/21/ HTTP/1.0" 200 46354
+2022-10-17 00:00:00
+2022-10-18 00:00:00
+/usr/local/lib/python3.10/dist-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField ETLog.created_at received a naive datetime (2022-10-17 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+/usr/local/lib/python3.10/dist-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField ETLog.created_at received a naive datetime (2022-10-18 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+[17/Oct/2022 08:21:50] "POST /reports/fetch_emp_route_activity/ HTTP/1.0" 200 2
+[17/Oct/2022 08:21:52] "GET /attendance/view-employee-attendance/ HTTP/1.0" 200 45595
+[17/Oct/2022 08:21:54] "GET /attendance/report-detail/21/ HTTP/1.0" 200 41562
+/usr/local/lib/python3.10/dist-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField EmployeeLoginLog.login_time received a naive datetime (2022-10-17 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+/usr/local/lib/python3.10/dist-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField EmployeeLoginLog.login_time received a naive datetime (2022-10-18 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+[17/Oct/2022 08:21:55] "POST /attendance/fetch_employee_login_logs/ HTTP/1.0" 200 2
+[17/Oct/2022 08:22:04] "GET /logs/view-activity-logs HTTP/1.0" 200 253626
+[17/Oct/2022 08:22:08] "GET /reports/employee_table/ HTTP/1.0" 200 45267
+[17/Oct/2022 08:22:14] "GET /reports/employee-travel-log/19/ HTTP/1.0" 200 46362
+2022-10-17 00:00:00
+2022-10-18 00:00:00
+[17/Oct/2022 08:22:15] "POST /reports/fetch_emp_route_activity/ HTTP/1.0" 200 2
+2022-10-15 00:00:00
+2022-10-16 00:00:00
+/usr/local/lib/python3.10/dist-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField ETLog.created_at received a naive datetime (2022-10-15 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+/usr/local/lib/python3.10/dist-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField ETLog.created_at received a naive datetime (2022-10-16 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+[17/Oct/2022 08:22:22] "POST /reports/fetch_emp_route_activity/ HTTP/1.0" 200 2
+[17/Oct/2022 08:22:32] "GET /jobs/view-job-assigned-logs/ HTTP/1.0" 200 40324
+[17/Oct/2022 08:22:39] "GET /logs/view-activity-logs HTTP/1.0" 200 253626
+[17/Oct/2022 08:22:48] "GET /accounts/employee-track/ HTTP/1.0" 200 45559
+[17/Oct/2022 08:22:48] "GET /jobs/fetch-emp-live-direction/ HTTP/1.0" 200 2
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[17/Oct/2022 08:22:52] "GET / HTTP/1.0" 200 43991
+Not Found: /reports/alarm_reponses/30/
+[17/Oct/2022 08:22:54] "GET /reports/alarm_reponses/30/ HTTP/1.0" 404 3774
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 17, 2022 - 10:41:31
+Django version 3.2.9, using settings 'security.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[17/Oct/2022 10:41:40] "GET / HTTP/1.0" 200 43991
+[17/Oct/2022 12:24:44] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 13:03:09] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 13:03:09] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[17/Oct/2022 13:03:10] "GET /favicon.ico HTTP/1.0" 404 3795
+[17/Oct/2022 15:11:30] "GET / HTTP/1.0" 302 0
+Not Found: /.env
+[17/Oct/2022 15:35:36] "GET /.env HTTP/1.0" 404 3774
+Forbidden (CSRF cookie not set.): /
+[17/Oct/2022 15:35:37] "POST / HTTP/1.0" 403 2870
+Not Found: /Electron/download/windows/\Windows\win.ini
+[17/Oct/2022 16:50:35] "GET /Electron/download/windows/\Windows\win.ini HTTP/1.0" 404 3892
+[17/Oct/2022 17:19:14] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 17:28:10] "GET / HTTP/1.0" 302 0
+Not Found: /aaa9
+[17/Oct/2022 17:38:21] "GET /aaa9 HTTP/1.0" 404 3774
+Not Found: /SxPA
+[17/Oct/2022 18:00:28] "GET /SxPA HTTP/1.0" 404 3774
+Not Found: /eeOD
+[17/Oct/2022 18:00:29] "GET /eeOD HTTP/1.0" 404 3774
+[17/Oct/2022 18:01:58] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 18:01:58] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[17/Oct/2022 18:13:00] "GET / HTTP/1.0" 302 0
+Not Found: /.DS_Store
+[17/Oct/2022 18:13:03] "GET /.DS_Store HTTP/1.0" 404 3789
+Not Found: /server-status
+[17/Oct/2022 18:13:04] "GET /server-status HTTP/1.0" 404 3801
+Not Found: /config.json
+[17/Oct/2022 18:13:05] "GET /config.json HTTP/1.0" 404 3795
+Not Found: /.env
+[17/Oct/2022 18:13:06] "GET /.env HTTP/1.0" 404 3774
+Not Found: /idx_config/
+[17/Oct/2022 18:13:08] "GET /idx_config/ HTTP/1.0" 404 3795
+Not Found: /telescope/requests
+[17/Oct/2022 18:13:09] "GET /telescope/requests HTTP/1.0" 404 3816
+Not Found: /info.php
+[17/Oct/2022 18:13:10] "GET /info.php HTTP/1.0" 404 3786
+Not Found: /.git/config
+[17/Oct/2022 18:13:11] "GET /.git/config HTTP/1.0" 404 3795
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[17/Oct/2022 18:37:25] "GET / HTTP/1.0" 200 43966
+[17/Oct/2022 19:09:28] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 19:09:36] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /robots.txt
+[17/Oct/2022 19:10:11] "GET /robots.txt HTTP/1.0" 404 3792
+[17/Oct/2022 19:12:57] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 19:17:22] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 19:17:22] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[17/Oct/2022 20:44:29] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 20:44:29] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[17/Oct/2022 21:01:27] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 302 0
+[17/Oct/2022 21:01:33] "GET /accounts/login/?next=/%3FXDEBUG_SESSION_START%3Dphpstorm HTTP/1.0" 200 47530
+[17/Oct/2022 21:22:01] "OPTIONS / HTTP/1.0" 302 0
+Not Found: /mifs/.;/services/LogService
+[17/Oct/2022 21:48:12] "POST /mifs/.;/services/LogService HTTP/1.0" 404 3846
+Not Found: /actuator/gateway/routes
+[17/Oct/2022 23:08:25] "GET /actuator/gateway/routes HTTP/1.0" 404 3831
+[17/Oct/2022 23:18:39] "GET / HTTP/1.0" 302 0
+Not Found: /robots.txt
+[17/Oct/2022 23:27:10] "GET /robots.txt HTTP/1.0" 404 3792
+[17/Oct/2022 23:27:10] "GET / HTTP/1.0" 302 0
+[17/Oct/2022 23:27:11] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[17/Oct/2022 23:29:17] "GET / HTTP/1.0" 302 0
+Not Found: /favicon.ico
+[17/Oct/2022 23:29:18] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /favicon.ico
+[17/Oct/2022 23:29:19] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /.well-known/acme-challenge/VN_Q8PXK98G9ZSYAK6O2N9F3R_DY1IQZ
+[17/Oct/2022 23:43:23] "GET /.well-known/acme-challenge/VN_Q8PXK98G9ZSYAK6O2N9F3R_DY1IQZ HTTP/1.0" 404 3939
+[18/Oct/2022 00:02:08] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:04:03] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:04:15] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:05:14] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:05:14] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 00:05:31] "GET / HTTP/1.0" 302 0
+Not Found: /remote/fgt_lang
+[18/Oct/2022 00:41:18] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+[18/Oct/2022 00:43:20] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:43:20] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 00:57:10] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:57:11] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 00:57:20] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:57:20] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 00:57:24] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 00:57:24] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[18/Oct/2022 00:57:26] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /ab2g
+[18/Oct/2022 01:05:55] "GET /ab2g HTTP/1.0" 404 3774
+[18/Oct/2022 01:06:06] "GET / HTTP/1.0" 302 0
+Not Found: /wp-login.php
+[18/Oct/2022 01:15:39] "GET /wp-login.php HTTP/1.0" 404 3798
+[18/Oct/2022 01:24:49] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:49] "GET //wp-includes/wlwmanifest.xml HTTP/1.0" 404 3843
+Not Found: /xmlrpc.php
+[18/Oct/2022 01:24:49] "GET //xmlrpc.php?rsd HTTP/1.0" 404 3796
+[18/Oct/2022 01:24:50] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:50] "GET //blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /web/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:50] "GET //web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:50] "GET //wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3873
+Not Found: /website/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:50] "GET //website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3867
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:51] "GET //wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3852
+Not Found: /news/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:51] "GET //news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:51] "GET //2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:51] "GET //2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:51] "GET //shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:52] "GET //wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /test/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:52] "GET //test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:52] "GET //wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /site/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:52] "GET //site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:53] "GET //cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[18/Oct/2022 01:24:53] "GET //sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+[18/Oct/2022 01:34:44] "GET / HTTP/1.0" 302 0
+Not Found: /remote/fgt_lang
+[18/Oct/2022 03:31:15] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+Not Found: /ab2g
+[18/Oct/2022 03:39:03] "GET /ab2g HTTP/1.0" 404 3774
+Not Found: /ab2h
+[18/Oct/2022 03:39:04] "GET /ab2h HTTP/1.0" 404 3774
+[18/Oct/2022 03:39:25] "GET / HTTP/1.0" 302 0
+Not Found: /owa/auth/logon.aspx
+[18/Oct/2022 03:39:44] "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.0" 404 3848
+[18/Oct/2022 03:44:11] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 03:44:16] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /wp-admin/css/
+[18/Oct/2022 03:58:28] "GET /wp-admin/css/ HTTP/1.0" 404 3801
+Not Found: /.well-known/
+[18/Oct/2022 03:58:43] "GET /.well-known/ HTTP/1.0" 404 3798
+Not Found: /sites/default/files/
+[18/Oct/2022 03:58:48] "GET /sites/default/files/ HTTP/1.0" 404 3822
+Not Found: /admin/controller/extension/extension/
+[18/Oct/2022 03:58:53] "GET /admin/controller/extension/extension/ HTTP/1.0" 404 3873
+Not Found: /uploads/
+[18/Oct/2022 03:58:59] "GET /uploads/ HTTP/1.0" 404 3786
+Not Found: /images/
+[18/Oct/2022 03:59:04] "GET /images/ HTTP/1.0" 404 3783
+Not Found: /files/
+[18/Oct/2022 03:59:11] "GET /files/ HTTP/1.0" 404 3780
+[18/Oct/2022 04:20:02] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 04:20:02] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 04:58:20] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 04:58:20] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /env
+[18/Oct/2022 05:04:27] "GET /env HTTP/1.0" 404 3771
+Not Found: /actuator/env
+[18/Oct/2022 05:04:28] "GET /actuator/env HTTP/1.0" 404 3798
+Not Found: /owa/
+[18/Oct/2022 05:07:35] "GET /owa/ HTTP/1.0" 404 3774
+[18/Oct/2022 05:19:12] "GET / HTTP/1.0" 302 0
+Not Found: /robots.txt
+[18/Oct/2022 06:20:11] "GET /robots.txt HTTP/1.0" 404 3792
+Not Found: /robots.txt
+[18/Oct/2022 06:20:11] "GET /robots.txt HTTP/1.0" 404 3792
+[18/Oct/2022 06:20:18] "GET / HTTP/1.0" 302 0
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[18/Oct/2022 06:40:05] "GET / HTTP/1.0" 200 43968
+[18/Oct/2022 06:40:19] "GET /logs/view-activity-logs HTTP/1.0" 200 253580
+[18/Oct/2022 06:40:31] "GET /jobs/view-alarm-response/ HTTP/1.0" 200 41120
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 593, in open_for_read
+    return open_for_read(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 593, in open_for_read
+    return open_for_read(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f9a8c5240 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 06:40:34] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 163571
+Not Found: /favicon.ico
+[18/Oct/2022 06:40:39] "GET /favicon.ico HTTP/1.0" 404 3795
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f99d241f0 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 06:55:58] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 153421
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f99ebe680 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 06:56:22] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 153558
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f99d1cb80 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 07:03:03] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 153421
+Internal Server Error: /reports/alarm_reponses/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f99d162c0 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 07:03:09] "GET /reports/alarm_reponses/2/ HTTP/1.0" 500 153421
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[18/Oct/2022 07:03:25] "GET / HTTP/1.0" 200 43968
+Not Found: /reports/alarm_reponses/30/
+[18/Oct/2022 07:03:34] "GET /reports/alarm_reponses/30/ HTTP/1.0" 404 3774
+Not Found: /reports/alarm_reponses/28/
+[18/Oct/2022 07:03:54] "GET /reports/alarm_reponses/28/ HTTP/1.0" 404 3774
+[18/Oct/2022 07:16:48] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 302 0
+[18/Oct/2022 07:16:49] "GET /accounts/login/?next=/%3FXDEBUG_SESSION_START%3Dphpstorm HTTP/1.0" 200 47530
+[18/Oct/2022 08:30:53] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 08:30:53] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /blog/
+[18/Oct/2022 08:52:07] "GET /blog/ HTTP/1.0" 404 3777
+[18/Oct/2022 09:03:35] "GET / HTTP/1.0" 302 0
+Not Found: /86ad51912cd50365a9edf05ddaee1fd2/css/legacy-main.css
+[18/Oct/2022 11:05:05] "GET //86ad51912cd50365a9edf05ddaee1fd2/css/legacy-main.css HTTP/1.0" 404 3918
+Not Found: /.git/config
+[18/Oct/2022 11:05:17] "GET /.git/config HTTP/1.0" 404 3795
+[18/Oct/2022 12:14:47] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 12:16:28] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /remote/fgt_lang
+[18/Oct/2022 12:42:06] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+[18/Oct/2022 12:45:28] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 12:45:29] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[18/Oct/2022 12:45:31] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /robots.txt
+[18/Oct/2022 12:45:31] "GET /robots.txt HTTP/1.0" 404 3792
+[18/Oct/2022 12:55:23] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 12:55:23] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /.env
+[18/Oct/2022 13:01:24] "GET /.env HTTP/1.0" 404 3774
+Forbidden (CSRF cookie not set.): /
+[18/Oct/2022 13:01:25] "POST / HTTP/1.0" 403 2870
+Not Found: /robots.txt
+[18/Oct/2022 13:36:14] "GET /robots.txt HTTP/1.0" 404 3792
+Not Found: /favicon.ico
+[18/Oct/2022 13:36:14] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /remote/fgt_lang
+[18/Oct/2022 15:06:32] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+[18/Oct/2022 15:26:18] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 15:26:18] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 15:49:03] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 15:49:04] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 15:59:29] "GET / HTTP/1.0" 302 0
+Not Found: /favicon.ico
+[18/Oct/2022 16:09:56] "GET /favicon.ico HTTP/1.0" 404 3795
+[18/Oct/2022 16:14:41] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 16:14:41] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 16:17:48] "GET / HTTP/1.0" 302 0
+Not Found: /aaa9
+[18/Oct/2022 17:41:02] "GET /aaa9 HTTP/1.0" 404 3774
+[18/Oct/2022 17:43:24] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 17:55:01] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 17:55:01] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /2epU
+[18/Oct/2022 18:03:39] "GET /2epU HTTP/1.0" 404 3774
+Not Found: /DaoI
+[18/Oct/2022 18:03:40] "GET /DaoI HTTP/1.0" 404 3774
+[18/Oct/2022 19:38:08] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 19:38:08] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /ab2g
+[18/Oct/2022 20:42:44] "GET /ab2g HTTP/1.0" 404 3774
+Not Found: /ab2h
+[18/Oct/2022 20:42:45] "GET /ab2h HTTP/1.0" 404 3774
+[18/Oct/2022 20:42:53] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 21:15:29] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 21:40:23] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 21:40:41] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 21:40:42] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[18/Oct/2022 21:40:51] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /robots.txt
+[18/Oct/2022 21:40:54] "GET /robots.txt HTTP/1.0" 404 3792
+Not Found: /.well-known/security.txt
+[18/Oct/2022 21:40:57] "GET /.well-known/security.txt HTTP/1.0" 404 3834
+Not Found: /1
+[18/Oct/2022 21:54:17] "GET /1 HTTP/1.0" 404 3765
+Unauthorized: /api/accounts/login/
+[18/Oct/2022 22:06:16] "POST /api/accounts/login/ HTTP/1.0" 401 58
+Unauthorized: /api/accounts/login/
+[18/Oct/2022 22:06:35] "POST /api/accounts/login/ HTTP/1.0" 401 58
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[18/Oct/2022 22:18:28] "GET / HTTP/1.0" 200 43966
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[18/Oct/2022 22:18:44] "GET / HTTP/1.0" 200 43966
+[18/Oct/2022 22:19:12] "GET /logs/view-activity-logs HTTP/1.0" 200 253376
+[18/Oct/2022 22:20:04] "GET /jobs/view-alarm-response/ HTTP/1.0" 200 41118
+<QuerySet [{'month': 7, 'c': 23}, {'month': 9, 'c': 7}]>
+<QuerySet [{'month': 9, 'c': 2}]>
+[18/Oct/2022 22:51:14] "GET / HTTP/1.0" 200 43966
+[18/Oct/2022 22:51:21] "GET /jobs/view-alarm-response/ HTTP/1.0" 200 41118
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f99dadc60 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 22:51:25] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 153423
+Not Found: /favicon.ico
+[18/Oct/2022 22:51:25] "GET /favicon.ico HTTP/1.0" 404 3795
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f9a86c9a0 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 22:51:46] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 153560
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f9a8c7a00 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 22:51:51] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 153560
+Internal Server Error: /reports/alarm_reponses/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 582, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 522, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 589, in open_for_read
+    return getBytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 535, in rlUrlRead
+    return urlopen(name).read()
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/django/django_project/report_management/views.py", line 69, in alarm_reponse_report
+    logo = ImageReader("https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png")
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 741, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 1297, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 169, in rl_reraise
+    raise v.with_traceback(b)
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 700, in __init__
+    self.fp = open_for_read(fileName,'b')
+  File "/usr/local/lib/python3.10/dist-packages/reportlab/lib/utils.py", line 591, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png' identity=[ImageReader@0x7f2f9a844f70 filename='https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png'] Cannot open resource "https://securityappbucket.s3.amazonaws.com/media/images/company/ypg-security-logo.png"
+[18/Oct/2022 22:52:04] "GET /reports/alarm_reponses/3/ HTTP/1.0" 500 153560
+[18/Oct/2022 22:54:37] "GET /accounts/view-employee/ HTTP/1.0" 200 68698
+[18/Oct/2022 23:03:55] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 23:04:14] "GET / HTTP/1.0" 302 0
+Not Found: /robots.txt
+[18/Oct/2022 23:14:26] "GET /robots.txt HTTP/1.0" 404 3792
+Not Found: /favicon.ico
+[18/Oct/2022 23:14:27] "GET /favicon.ico HTTP/1.0" 404 3795
+[18/Oct/2022 23:16:19] "GET / HTTP/1.0" 302 0
+[18/Oct/2022 23:16:19] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[18/Oct/2022 23:18:24] "GET / HTTP/1.0" 302 0
+Not Found: /.well-known/acme-challenge/78WV_JXP53JIOSW5OG-MJOXOCJ2VMIDL
+[18/Oct/2022 23:42:23] "GET /.well-known/acme-challenge/78WV_JXP53JIOSW5OG-MJOXOCJ2VMIDL HTTP/1.0" 404 3939
+Not Found: /robots.txt
+[19/Oct/2022 00:00:03] "GET /robots.txt HTTP/1.0" 404 3792
+[19/Oct/2022 00:00:04] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 00:00:04] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /test_404_page/
+[19/Oct/2022 00:00:05] "GET /test_404_page/ HTTP/1.0" 404 3804
+Not Found: /favicon.ico
+[19/Oct/2022 00:01:14] "GET //favicon.ico HTTP/1.0" 404 3795
+Not Found: /robots.txt
+[19/Oct/2022 00:02:54] "GET /robots.txt HTTP/1.0" 404 3792
+[19/Oct/2022 00:02:54] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 00:02:55] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /test_404_page/
+[19/Oct/2022 00:04:26] "GET /test_404_page/ HTTP/1.0" 404 3804
+Not Found: /favicon.ico
+[19/Oct/2022 00:13:19] "GET //favicon.ico HTTP/1.0" 404 3795
+Not Found: /robots.txt
+[19/Oct/2022 00:14:51] "GET /robots.txt HTTP/1.0" 404 3792
+[19/Oct/2022 00:14:51] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 00:14:52] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /test_404_page/
+[19/Oct/2022 00:14:52] "GET /test_404_page/ HTTP/1.0" 404 3804
+Not Found: /favicon.ico
+[19/Oct/2022 00:15:16] "GET //favicon.ico HTTP/1.0" 404 3795
+Not Found: /remote/fgt_lang
+[19/Oct/2022 00:30:00] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+Not Found: /version
+[19/Oct/2022 01:07:49] "GET /version HTTP/1.0" 404 3783
+[19/Oct/2022 01:59:45] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 01:59:45] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 01:59:45] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:00:09] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:00:09] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:00:10] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:01:22] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:01:22] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:01:22] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:01:42] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:01:43] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:01:43] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:02:13] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:02:13] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:02:13] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:02:35] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:02:36] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:02:36] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:03:28] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:03:28] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:03:28] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:04:29] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:04:30] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:04:30] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:05:04] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:05:04] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 02:05:04] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 02:32:09] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 02:32:09] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 02:34:21] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:21] "GET //wp-includes/wlwmanifest.xml HTTP/1.0" 404 3843
+Not Found: /xmlrpc.php
+[19/Oct/2022 02:34:21] "GET //xmlrpc.php?rsd HTTP/1.0" 404 3796
+[19/Oct/2022 02:34:22] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:22] "GET //blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /web/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:22] "GET //web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:22] "GET //wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3873
+Not Found: /website/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:22] "GET //website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3867
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:23] "GET //wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3852
+Not Found: /news/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:23] "GET //news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:23] "GET //2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:23] "GET //2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:23] "GET //shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:24] "GET //wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /test/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:24] "GET //test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:24] "GET //wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /site/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:24] "GET //site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:24] "GET //cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3855
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[19/Oct/2022 02:34:25] "GET //sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3858
+Not Found: /owa/auth/logon.aspx
+[19/Oct/2022 03:25:53] "GET /owa/auth/logon.aspx HTTP/1.0" 404 3819
+Not Found: /owa/auth/x.js
+[19/Oct/2022 03:26:52] "GET /owa/auth/x.js HTTP/1.0" 404 3801
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[19/Oct/2022 03:27:31] "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.0" 404 3987
+Not Found: /owa/auth/logon.aspx
+[19/Oct/2022 03:59:38] "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.0" 404 3848
+[19/Oct/2022 04:23:23] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 04:23:24] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 04:23:25] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 04:23:31] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /robots.txt
+[19/Oct/2022 04:23:35] "GET /robots.txt HTTP/1.0" 404 3792
+Not Found: /.well-known/security.txt
+[19/Oct/2022 04:23:37] "GET /.well-known/security.txt HTTP/1.0" 404 3834
+Not Found: /remote/fgt_lang
+[19/Oct/2022 04:26:20] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+[19/Oct/2022 04:34:33] "GET / HTTP/1.0" 302 0
+Not Found: /Telerik.Web.UI.WebResource.axd
+[19/Oct/2022 05:20:36] "GET /Telerik.Web.UI.WebResource.axd?type=rau HTTP/1.0" 404 3861
+[19/Oct/2022 05:23:31] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 05:23:31] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 05:25:32] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 05:31:15] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 05:31:16] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 05:31:17] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 05:31:18] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 05:31:19] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 05:31:20] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /.env
+[19/Oct/2022 05:32:38] "GET /.env HTTP/1.0" 404 3774
+Forbidden (CSRF cookie not set.): /
+[19/Oct/2022 05:32:38] "POST / HTTP/1.0" 403 2870
+[19/Oct/2022 05:40:15] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 302 0
+[19/Oct/2022 06:03:14] "GET / HTTP/1.0" 302 0
+Not Found: /accounts/login/?next=/
+[19/Oct/2022 06:03:14] "GET /accounts/login/%3Fnext=/ HTTP/1.0" 404 5731
+[19/Oct/2022 06:35:16] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 06:35:16] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 07:00:57] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 07:00:57] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 07:02:12] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 07:02:12] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 07:02:12] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 07:02:12] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /api/v2/cmdb/system/admin/admin
+[19/Oct/2022 07:41:37] "PUT /api/v2/cmdb/system/admin/admin HTTP/1.0" 404 7023
+[19/Oct/2022 07:54:31] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 07:54:31] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /robots.txt
+[19/Oct/2022 08:08:45] "GET /robots.txt HTTP/1.0" 404 3792
+[19/Oct/2022 08:08:45] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 08:08:45] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /test_404_page/
+[19/Oct/2022 08:08:46] "GET /test_404_page/ HTTP/1.0" 404 3804
+Not Found: /favicon.ico
+[19/Oct/2022 08:10:32] "GET //favicon.ico HTTP/1.0" 404 3795
+Not Found: /robots.txt
+[19/Oct/2022 08:11:50] "GET /robots.txt HTTP/1.0" 404 3792
+[19/Oct/2022 08:11:50] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 08:11:50] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /test_404_page/
+[19/Oct/2022 08:11:53] "GET /test_404_page/ HTTP/1.0" 404 3804
+Not Found: /favicon.ico
+[19/Oct/2022 08:11:59] "GET //favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 08:15:44] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 08:15:44] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 08:15:44] "GET /accounts/login/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 08:15:44] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /.env
+[19/Oct/2022 08:16:07] "GET /.env HTTP/1.0" 404 3774
+Not Found: /remote/fgt_lang
+[19/Oct/2022 10:31:22] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+[19/Oct/2022 10:31:36] "GET / HTTP/1.0" 302 0
+Not Found: /ReportServer
+[19/Oct/2022 10:37:20] "GET /ReportServer HTTP/1.0" 404 3798
+Not Found: /favicon.ico
+[19/Oct/2022 10:39:58] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 10:43:33] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 10:43:34] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /login
+[19/Oct/2022 11:04:59] "GET /login HTTP/1.0" 404 3777
+Not Found: /favicon.ico
+[19/Oct/2022 11:40:04] "GET /favicon.ico HTTP/1.0" 404 3795
+[19/Oct/2022 11:44:55] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 12:53:02] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 12:58:58] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 12:58:58] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 14:02:29] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 14:06:11] "GET / HTTP/1.0" 302 0
+Not Found: /config.php
+[19/Oct/2022 14:50:27] "GET /config.php HTTP/1.0" 404 3792
+[19/Oct/2022 15:38:47] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 15:38:47] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /portal/info.jsp
+[19/Oct/2022 16:05:22] "GET /portal/info.jsp HTTP/1.0" 404 3807
+[19/Oct/2022 16:26:22] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 16:26:23] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /autodiscover/autodiscover.json
+[19/Oct/2022 16:33:28] "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.0" 404 3868
+Not Found: /.env
+[19/Oct/2022 16:42:51] "GET /.env HTTP/1.0" 404 3774
+Forbidden (CSRF cookie not set.): /
+[19/Oct/2022 16:42:51] "POST / HTTP/1.0" 403 2870
+Not Found: /aaa9
+[19/Oct/2022 17:21:50] "GET /aaa9 HTTP/1.0" 404 3774
+Not Found: /Electron/download/windows/\Program Files\3CX Phone System\Data\DB\base\16384\16393
+[19/Oct/2022 19:19:41] "GET /Electron/download/windows/%5CProgram%20Files%5C3CX%20Phone%20System%5CData%5CDB%5Cbase%5C16384%5C16393 HTTP/1.0" 404 4028
+[19/Oct/2022 20:56:50] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 20:56:50] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 20:56:52] "GET /accounts/login/ HTTP/1.0" 200 47530
+Not Found: /favicon.ico
+[19/Oct/2022 20:56:53] "GET /favicon.ico HTTP/1.0" 404 3795
+Not Found: /remote/fgt_lang
+[19/Oct/2022 20:59:32] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+Not Found: /remote/fgt_lang
+[19/Oct/2022 21:14:02] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+Not Found: /robots.txt
+[19/Oct/2022 21:38:56] "GET /robots.txt HTTP/1.0" 404 3792
+Not Found: /humans.txt
+[19/Oct/2022 21:38:57] "GET /humans.txt HTTP/1.0" 404 3792
+Not Found: /ads.txt
+[19/Oct/2022 21:38:58] "GET /ads.txt HTTP/1.0" 404 3783
+[19/Oct/2022 21:38:59] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 21:39:00] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[19/Oct/2022 22:10:18] "HEAD / HTTP/1.0" 302 0
+Not Found: /cgi-bin/config.exp
+[19/Oct/2022 22:14:31] "GET /cgi-bin/config.exp HTTP/1.0" 404 3816
+Not Found: /.env
+[19/Oct/2022 22:31:24] "GET /.env HTTP/1.0" 404 3774
+Forbidden (CSRF cookie not set.): /
+[19/Oct/2022 22:31:24] "POST / HTTP/1.0" 403 2870
+[19/Oct/2022 23:11:12] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 23:15:39] "GET / HTTP/1.0" 302 0
+[19/Oct/2022 23:15:39] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /.well-known/acme-challenge/YVI5MXC3W0G8HBM-A46LS8WYN7Q860RA
+[19/Oct/2022 23:52:43] "GET /.well-known/acme-challenge/YVI5MXC3W0G8HBM-A46LS8WYN7Q860RA HTTP/1.0" 404 3939
+Not Found: /actuator/health
+[20/Oct/2022 00:07:09] "GET /actuator/health HTTP/1.0" 404 3807
+[20/Oct/2022 01:29:51] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 01:31:30] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 01:31:30] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /system_api.php
+[20/Oct/2022 02:33:08] "GET /system_api.php HTTP/1.0" 404 3804
+Not Found: /c/version.js
+[20/Oct/2022 02:33:08] "GET /c/version.js HTTP/1.0" 404 3798
+Not Found: /streaming/clients_live.php
+[20/Oct/2022 02:33:09] "GET /streaming/clients_live.php HTTP/1.0" 404 3840
+Not Found: /stalker_portal/c/version.js
+[20/Oct/2022 02:33:09] "GET /stalker_portal/c/version.js HTTP/1.0" 404 3843
+Not Found: /stream/live.php
+[20/Oct/2022 02:33:10] "GET /stream/live.php HTTP/1.0" 404 3807
+Not Found: /flu/403.html
+[20/Oct/2022 02:33:10] "GET /flu/403.html HTTP/1.0" 404 3798
+[20/Oct/2022 02:33:11] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 02:33:11] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+[20/Oct/2022 02:42:34] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 02:42:34] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 02:43:51] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 302 0
+[20/Oct/2022 02:47:44] "GET / HTTP/1.0" 302 0
+Not Found: /ab2g
+[20/Oct/2022 03:01:10] "GET /ab2g HTTP/1.0" 404 3774
+Not Found: /ab2h
+[20/Oct/2022 03:01:10] "GET /ab2h HTTP/1.0" 404 3774
+[20/Oct/2022 03:01:14] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 03:23:21] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 03:23:22] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /.env
+[20/Oct/2022 03:23:24] "GET /.env HTTP/1.0" 404 3774
+Forbidden (CSRF cookie not set.): /
+[20/Oct/2022 03:23:27] "POST / HTTP/1.0" 403 2870
+[20/Oct/2022 03:26:17] "GET / HTTP/1.0" 302 0
+Not Found: /.env
+[20/Oct/2022 03:42:08] "GET /.env HTTP/1.0" 404 3774
+Forbidden (CSRF cookie not set.): /
+[20/Oct/2022 03:42:08] "POST / HTTP/1.0" 403 2870
+Not Found: /owa/auth/logon.aspx
+[20/Oct/2022 04:05:51] "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.0" 404 3848
+[20/Oct/2022 04:11:55] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 04:11:55] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /wp-admin/options-general.php
+[20/Oct/2022 04:11:56] "POST /wp-admin/options-general.php?page=smartcode HTTP/1.0" 404 3862
+[20/Oct/2022 04:11:56] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 04:11:56] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /wp-content/plugins/simple-file-list/ee-upload-engine.php
+[20/Oct/2022 04:11:57] "POST /wp-content/plugins/simple-file-list/ee-upload-engine.php HTTP/1.0" 404 3931
+Not Found: /wp-content/plugins/simple-file-list/ee-file-engine.php
+[20/Oct/2022 04:11:57] "POST /wp-content/plugins/simple-file-list/ee-file-engine.php HTTP/1.0" 404 3925
+Not Found: /wp-content/uploads/simple-file-list/nuclei.php
+[20/Oct/2022 04:11:57] "GET /wp-content/uploads/simple-file-list/nuclei.php HTTP/1.0" 404 3900
+Not Found: /settings.py
+[20/Oct/2022 04:11:57] "GET /settings.py HTTP/1.0" 404 3795
+Not Found: /app/settings.py
+[20/Oct/2022 04:11:57] "GET /app/settings.py HTTP/1.0" 404 3807
+Not Found: /2GEgUU3pS47Sz2hJVpd153mPP0n.json
+[20/Oct/2022 04:11:57] "PUT /2GEgUU3pS47Sz2hJVpd153mPP0n.json HTTP/1.0" 404 3858
+Not Found: /django/settings.py
+[20/Oct/2022 04:11:57] "GET /django/settings.py HTTP/1.0" 404 3816
+Not Found: /2GEgUU3pS47Sz2hJVpd153mPP0n.json
+[20/Oct/2022 04:11:57] "GET /2GEgUU3pS47Sz2hJVpd153mPP0n.json HTTP/1.0" 404 3858
+Not Found: /settings/settings.py
+[20/Oct/2022 04:11:57] "GET /settings/settings.py HTTP/1.0" 404 3822
+Not Found: /web/settings/settings.py
+[20/Oct/2022 04:11:57] "GET /web/settings/settings.py HTTP/1.0" 404 3834
+Not Found: /admin/login/
+[20/Oct/2022 04:11:58] "POST /admin/login/?next=/admin/ HTTP/1.0" 404 3812
+[20/Oct/2022 04:11:58] "GET / HTTP/1.0" 302 0
+[20/Oct/2022 04:11:58] "GET /accounts/login/?next=/ HTTP/1.0" 200 47530
+Not Found: /webadmin/tools/unixlogin.php
+[20/Oct/2022 04:11:58] "GET /webadmin/tools/unixlogin.php?login=admin&password=g%27%2C%27%27%29%3Bimport%20os%3Bos.system%28%276563686f2022626d39755a5868706333526c626e513d22207c20626173653634202d64203e202f7573722f6c6f63616c2f6e6574737765657065722f77656261646d696e2f6f7574%27.decode%28%27hex%27%29%29%23&timeout=5 HTTP/1.0" 404 4109
+Not Found: /webadmin/out
+[20/Oct/2022 04:11:58] "GET /webadmin/out HTTP/1.0" 404 3798
+[20/Oct/2022 04:11:58] "GET /?q=20)%20%3D%201%20OR%20(select%20utl_inaddr.get_host_name((SELECT%20version%20FROM%20v%24instance))%20from%20dual)%20is%20null%20%20OR%20(1%2B1 HTTP/1.0" 302 0
+[20/Oct/2022 04:11:58] "GET /accounts/login/?next=/%3Fq%3D20%29%2520%253D%25201%2520OR%2520%28select%2520utl_inaddr.get_host_name%28%28SELECT%2520version%2520FROM%2520v%2524instance%29%29%2520from%2520dual%29%2520is%2520null%2520%2520OR%2520%281%252B1 HTTP/1.0" 200 47530
+Not Found: /cobbler_api
+[20/Oct/2022 04:11:58] "POST /cobbler_api HTTP/1.0" 404 3796
+Not Found: /cobbler_api
+[20/Oct/2022 04:11:58] "POST /cobbler_api HTTP/1.0" 404 3796
+Not Found: /remote/fgt_lang
+[20/Oct/2022 04:38:10] "GET /remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession HTTP/1.0" 404 3861
+Not Found: /actuator/gateway/routes
+[20/Oct/2022 04:54:03] "GET /actuator/gateway/routes HTTP/1.0" 404 3831

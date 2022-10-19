@@ -1,0 +1,234 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+        
+        <meta charset="utf-8" />
+        <title>YPG Security - Admin & Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{%  static 'images/favicon.ico' %}">
+
+        <!-- jquery.vectormap css -->
+        <!-- <link href="{% static 'libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet" type="text/css" /> -->
+
+        <!-- DataTables -->
+        <link href="{% static 'libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="{% static 'libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />  
+
+        <!-- Bootstrap Css -->
+        <link href="{% static 'css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static 'css/app.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    </head>
+
+    <body class="sidebar-enable vertical-collpsed">
+    
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            {% include '../includes/header.html' %}
+            <!-- ========== Left Sidebar Start ========== -->
+            {% include '../includes/sidenav.html' %}
+            <!-- Left Sidebar End -->
+
+            
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                {% include '../includes/alerts.html' %}
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0 fw-bold fs-4">{{ employee_first_name }} {{ employee_first_name }}</h4>
+                                    
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">YPG Security</a></li>
+                                            <li class="breadcrumb-item active">Detail Report</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">    
+                                        <div id="reportrange" class="border border-primary px-2 py-1 rounded mb-2">
+                                            <i class="fa fa-calendar"></i>&nbsp;
+                                            <span></span> <i class="fa fa-caret-down"></i>
+                                        </div>                                    
+                                        <input type="text" id="myInput" class="form-control mb-2 w-auto" placeholder="Filter Logs">
+                                        <table id="mytable" class="table table-striped table-bordered dt-responsive nowrap mytable" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                            <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Login Time</th>
+                                                <th>Login Time Since</th>
+                                                <th>Logout Time</th>
+                                                <th>Total Time</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div>
+                    
+                </div>
+                <!-- End Page-content -->
+               
+                {% include '../includes/footer.html' %}
+                
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+
+
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+        <!-- <script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+        <script src="{% static 'libs/node-waves/waves.min.js' %}"></script> -->
+
+        
+
+
+   
+
+        <!-- App js -->
+        <script src="{% static 'js/app.js' %}"></script>      
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <!-- moment-duration-format plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/1.3.0/moment-duration-format.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+
+                $("#myInput").on("keyup", function() {
+                        var value = $(this).val().toLowerCase();
+                        $("#mytable tbody tr").filter(function() {
+                             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+                
+            
+                var start = moment();
+                var end = moment();
+            
+                function cb(start, end) {
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+
+                    $.ajax({
+                            url: "{% url 'fetch_employee_login_logs' %}",
+                            dataType: "json",
+                            method: "POST",
+                            data:{
+                                employee_id: {{ pk }},
+                                start_date: start.format('Y-MM-DD'),
+                                end_date: end.format('Y-MM-DD')
+                            },
+                           
+                            success:function(data){
+                               $('.mytable tbody').html('')
+                               html=""
+                               if(data.length==0){
+                                   html+="<tr>"
+                                   html+="<td class='text-center text-danger' colspan='4'>No records Available</td>"
+                                   
+                                   html+="</tr>"
+                               }
+                               for(i=0;i<data.length;i++){
+                                    diffrence= "-"
+                                    timesince="-"
+                                   login_date = moment(data[i].login_time).format('ddd DD-MMM-Y')
+                                   login_time = moment(data[i].login_time).format('hh:mm:ss A')
+
+
+                                   if(data[i].logout_time != null){
+                                        logout_time = moment(data[i].logout_time).format('DD-MMM-Y, hh:mm:ss A')
+                                        logout_time_m = moment(data[i].logout_time)
+
+                                        var a = logout_time_m 
+                                        var b = moment(data[i].login_time)
+                                        var diff_s = a.diff(b, 'seconds'); 
+
+                                        var duration = moment.duration(diff_s, 'seconds');
+                                        var formatted = duration.format("hh:mm:ss", { trim: false });
+                                        diffrence = formatted
+
+                                        // diffrence = moment.utc(moment.duration(diff_s, "seconds").asMilliseconds()).format("hh:mm:ss")
+
+                                        // diffrence =  logout_time_m.diff(moment(data[i].login_time),"hours") +" hours"
+                                   }
+                                   else{
+                                        logout_time="-"
+                                        timesince = moment(data[i].login_time).fromNow()
+                                   }
+                                   html+="<tr>"
+                                   html+="<td>"+ login_date+"</td>"
+                                   html+="<td>"+ login_time +"</td>"
+                                   html+="<td>"+ timesince +"</td>"
+                                   html+="<td>"+ logout_time +"</td>"
+                                   html+="<td>"+ diffrence +"</td>"
+                                   html+="</tr>"
+                               }
+                               $('.mytable tbody').append(html)
+                            },
+                            error:function(){
+                                $('.mytable tbody').html('')
+                            }
+                        });
+                }
+            
+                $('#reportrange').daterangepicker({
+                    startDate: start,
+                    endDate: end,
+                    ranges: {
+                       'Today': [moment(), moment()],
+                       'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                       'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                       'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                       'This Month': [moment().startOf('month'), moment().endOf('month')],
+                       'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
+                }, cb);
+            
+                cb(start, end);
+            
+            });
+            </script>
+
+
+    </body>
+</html>

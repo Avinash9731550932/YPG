@@ -1,0 +1,277 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+        
+        <meta charset="utf-8" />
+        <title>YPG Security</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{%  static 'images/favicon.ico' %}">
+
+
+        <!-- Bootstrap Css -->
+        <link href="{% static 'css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static 'css/app.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="sidebar-enable vertical-collpsed">
+    
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            
+            {% include '../includes/header.html' %}
+            <!-- ========== Left Sidebar Start ========== -->
+            {% include '../includes/sidenav.html' %}
+            <!-- Left Sidebar End -->
+
+            
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+
+                                {% include '../includes/alerts.html' %}
+
+
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0">Update Employee</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Employee</a></li>
+                                            <li class="breadcrumb-item active">Update Employee</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row mb-2">
+                            <div class="col-12 text-end">
+                                <a href="{% url 'view_employee' %}" class="btn btn-outline-primary btn-sm">View Employee</a>
+                            </div>
+                        </div>
+
+                        {% if form.errors %}
+                            {% for key,value in form.errors.items %}
+                            <div class="alert alert-danger" role="alert">
+                                {{ value|escape }}
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        
+
+                        {% if profile_form.errors %}
+                            {% for key,value in profile_form.errors.items %}
+                            <div class="alert alert-danger" role="alert">
+                                {{ value|escape }}
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        
+                        <form method="POST" action="{% url 'update_employee' pk %}" enctype="multipart/form-data" >
+                            {% csrf_token %}
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-3">Add Employee - General Info</h4>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_first_name" class="form-label">First name</label>
+                                                {{ form.first_name }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_last_name" class="form-label">Last name</label>
+                                                {{ form.last_name }}
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_email" class="form-label">Email</label>
+                                                {{ form.email }}
+
+                                                <div class="invalid-feedback">
+                                                    {{ form.email.errors }}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_username" class="form-label">Username</label>
+                                                {{ form.username }}
+
+                                                <p class="text-small">{{ form.username.help_text }}</p>
+
+                                                <div class="invalid-feedback">
+                                                    {{ form.username.errors }}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-3">Personal Information</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_phone_number" class="form-label">Phone Number</label>
+                                                {{ profile_form.phone_number }}
+                                                <div class="invalid-feedback">
+                                                    {{ profile_form.phone_number.errors }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_driving_license" class="form-label">Driving License</label>
+                                                {{ profile_form.driving_license }}
+                                                <div class="invalid-feedback">
+                                                    {{ profile_form.driving_license.errors }}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_security_license" class="form-label">Security License</label>
+                                                {{ profile_form.security_license }}
+                                                <div class="invalid-feedback">
+                                                    {{ profile_form.security_license.errors }}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_profile_picture" class="form-label">Profile Picture</label>
+                                                {{ profile_form.profile_picture }}
+
+                                                <p class="text-small">{{ profile_form.profile_picture.help_text }}</p>
+
+                                                <div class="invalid-feedback">
+                                                    {{ profile_form.profile_picture.errors }}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="id_document_image" class="form-label">Document Image</label>
+                                                {{ profile_form.document_image }}
+                                                <p class="text-small">{{ profile_form.document_image.help_text }}</p>
+
+                                                <div class="invalid-feedback">
+                                                    {{ profile_form.document_image.errors }}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="id_address" class="form-label">Address</label>
+                                                {{ profile_form.address }}
+
+                                                <div class="invalid-feedback">
+                                                    {{ profile_form.address.errors }}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+
+
+                       
+
+                                    
+                                    <div>
+                                        <button class="btn btn-primary" type="submit">Update Employee</button>
+                                    </div>
+                               
+                            </div>
+                        </div>
+                        <!-- end card -->
+
+                    </form>
+                           
+                        
+                       
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                {% include '../includes/footer.html' %}
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+        <!-- <script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+        <script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+
+        <script src="{% static 'libs/parsleyjs/parsley.min.js' %}"></script>
+
+        <script src="{% static 'js/pages/form-validation.init.js' %}"></script> -->
+
+        <script src="{% static 'js/app.js' %}"></script>
+
+    </body>
+
+</html>

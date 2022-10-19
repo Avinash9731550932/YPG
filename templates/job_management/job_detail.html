@@ -1,0 +1,816 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<title>YPG Security</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+	<meta content="Themesdesign" name="author" />
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="{%  static 'images/favicon.ico' %}">
+
+
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+	<!-- Icons Css -->
+	<link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+	<!-- App Css-->
+	<link href="{% static 'css/app.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+</head>
+
+<style>
+	#map {
+		height: 500px;
+		width: 100%;
+	}
+</style>
+
+<body class="sidebar-enable vertical-collpsed">
+	<input type="hidden" id="job_id_hidden" value="0">
+
+
+
+	<!-- Begin page -->
+	<div id="layout-wrapper">
+
+		{% include '../includes/header.html' %}
+		<!-- ========== Left Sidebar Start ========== -->
+		{% include '../includes/sidenav.html' %}
+		<!-- Left Sidebar End -->
+
+
+		<!-- ============================================================== -->
+		<!-- Start right Content here -->
+		<!-- ============================================================== -->
+		<div class="main-content">
+
+			<div class="page-content">
+				<div class="container-fluid">
+
+					<!-- start page title -->
+					<div class="row">
+						<div class="col-12">
+							<div class="page-title-box d-sm-flex align-items-center justify-content-end">
+
+
+								<div class="page-title-right">
+									<ol class="breadcrumb m-0">
+										<li class="breadcrumb-item"><a href="javascript: void(0);">Job Management</a>
+										</li>
+										<li class="breadcrumb-item active">Job Detail</li>
+										
+									</ol>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- end page title -->
+
+					<div class="row">
+						<div class="col-12 col-lg-8 mx-auto">
+							<div class="d-flex justify-content-between">
+								<h4 class="mb-sm-0 fw-bold fs-4">JOB DETAIL - <span id="clock"></span></h4>
+								<div class="form-check form-switch c-form-switch d-flex align-items-center gap-2 ">
+									<input class="form-check-input mt-0 cursor-pointer" type="checkbox" role="switch"
+										id="labelEnableBtn">
+									<label class="form-check-label fs-5" for="labelEnableBtn">Employee Detail
+										Label</label>
+								</div>
+							</div>
+							<div class="shadow-sm p-2 bg-white rounded border border-success">
+								<div id="map"></div>
+							</div>
+							<div id="current" class="m-2">
+								<p><b class="fw-bold fs-5">Target</b>: Current Lat: <span class="latdis"></span> Current
+									Lng:<span class="lngdis"></span></p>
+							</div>
+							<!-- <button id="show_tbl_emp" class="btn btn-primary">Show table</button> -->
+							<div class="row mt-4 mb-3">
+								<div class="col-12">
+									<h4 class="card-title mb-3 fw-bold fs-4">Employee Status</h4>
+									<table class="table table-striped table-hover table-bordered bg-white">
+										<thead>
+											<th>Username</th>
+											<th>Latitude</th>
+											<th>Longitude</th>
+											<th>Distance</th>
+											<th>Status</th>
+											<th>Manual Assign</th>
+										</thead>
+										<tbody class="employee_table_body">
+										</tbody>
+									</table>
+
+									<div>
+										<button type="button" id="assign_job_btn"
+											class="btn btn-success w-auto d-none">Auto Assign
+											Job</button>
+
+											<button type="button" id="abort_auto_assign_btn"
+											class="btn btn-danger w-auto d-none">Abort Auto Assign
+											Job</button>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row mt-4 job_assign_log_div d-none">
+								<h6 class="card-title mb-3 fw-bold fs-4 text-success">The Jobs Are Assigning
+									<i class="ri-refresh-line job_assign_icon_rotate rotate-icon d-inline-block"></i>
+								</h6>
+								<hr>
+								<div id="job_logs_section">
+									<!-- <p class="text-primary mb-2">The Job request sent to Rashad</p>
+									<p class="text-danger mb-2">Rashad Denied Job Request</p>
+									<p class="text-primary mb-2">Job Request Sent to Vinod</p>
+									<p class="text-success mb-2">Vinod Accepted Job Request</p>
+									<p class="text-success mb-2">Job Assign Closed</p> -->
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-12 col-lg-4">
+							<form id="job_form">
+								{% csrf_token %}
+                                <h5 class="fw-bold">JOB NO : <span class="text-success">{{ job.job_no }}</span></h5>
+                                <h5 class="fw-bold">STATUS : <span class="text-success">{{ job.status }}</span></h5>
+								<div class="card border border-primary">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="mb-3">
+													<label for="id_car_name" class="form-label">Select Address</label>
+													<input type="text" id="autocomplete_adds" value="{{ job.address }}"
+														class="form-control">
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<div class="mb-3">
+													<label for="job_address" class="form-label">Address</label>
+													<textarea name="address_txt" id="job_address" rows="5" required
+														class="form-control">{{ job.address }}</textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="mb-3">
+													<label for="id_job_no" class="form-label">Job No</label>
+													<input type="text" id="id_job_no" required name="job_no_txt"
+														class="form-control" value="{{ job.job_no }}">
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<div class="mb-3">
+													<label for="id_job_zone" class="form-label">Zone</label>
+													<input type="text" id="id_job_zone" required name="job_zone_txt"
+														class="form-control" value="{{ job.zone }}">
+												</div>
+											</div>
+
+
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label for="assign-lat" class="form-label">Latitude</label>
+													<input type="text" class="form-control" required readonly
+														id="assign-lat" name="lat_txt" value="{{ job.lat }}">
+
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label for="assign-lng" class="form-label">Longitude</label>
+													<input type="text" class="form-control" required readonly
+														id="assign-lng" name="lng_txt" value="{{ job.lng }}">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="mb-3">
+													<label for="id_client_name" class="form-label">Client Name</label>
+													<input type="text" class="form-control" id="id_client_name"
+														name="client_name_txt" value="{{ job.client_name }}">
+
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="mb-3">
+													<label for="id_client_phone" class="form-label">Client Phone
+														Number</label>
+													<input type="text" class="form-control" id="id_client_phone"
+														name="client_phone_txt" value="{{ job.client_phone_number }}">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="mb-3">
+													<label for="id_remark" class="form-label">Remark</label>
+													<input type="text" class="form-control" id="id_remark"
+														name="remark_txt"  value="{{ job.remark }}">
+												</div>
+											</div>
+
+											<input type="hidden" value="{{ job.id }}" name="job_id_hidden">
+										</div>
+										<div class="row mt-3">
+											<div class="col">
+												<button type="submit" id="update_job_btn"
+													class="btn btn-primary w-auto">Update Job <i
+														class="ri-refresh-line rotate-icon d-none d-inline-block"></i></button>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div> <!-- end col -->
+						<!-- <div class="col-12 col-lg-8"> -->
+							<!-- <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Mangalore+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>  -->
+							<!-- <div class="row mt-4">
+                                  <h4 class="card-title mb-3 fw-bold fs-4">Employee Status</h4>
+                                  <table class="table table-striped table-hover table-bordered bg-white">
+                                      <thead>
+                                       <th>Employee Name</th>
+                                       <th>Asset</th>
+                                       <th>Last Login</th>
+                                       <th>Distance</th>
+                                       <th>Status</th>
+                                       <th>Action</th>
+                                      </thead>
+                                      <tbody class="employee_table_body">    
+                                      </tbody>
+                                    </table>
+                              </div> -->
+
+						<!-- </div> -->
+
+					</div> <!-- end row -->
+
+				</div> <!-- container-fluid -->
+			</div>
+			<!-- End Page-content -->
+
+
+			{% include '../includes/footer.html' %}
+		</div>
+		<!-- end main content-->
+
+	</div>
+	<!-- END layout-wrapper -->
+
+
+
+	<!-- JAVASCRIPT -->
+	<script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+	<!-- <script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+	<script src="{% static 'libs/node-waves/waves.min.js' %}"></script> -->
+	<script src="{% static 'js/app.js' %}"></script>
+	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+	<script src="https://js.pusher.com/7.0.3/pusher.min.js"></script>
+	<script>
+		alertify.set('notifier', 'position', 'top-right');
+		var empDistList = [];
+		window.initMap = function () {
+			var emp_live_loc;
+			// const MAP_BOUNDS = {
+			// 	north: -37.81303603089232,
+			// 	south: -37.82258248350233,
+			// 	west: 144.94782999797488,
+			// 	east: 144.96802320812213,
+			// };
+			const mapCenter = { lat: -37.81752848072373, lng: 144.95798208365622 }
+			map = new google.maps.Map(document.getElementById("map"), {
+				center: mapCenter,
+				// restriction: {
+				// 	latLngBounds: MAP_BOUNDS,
+				// 	strictBounds: false,
+				// },
+				zoom: 16,
+				disableDefaultUI: true,
+				// styles: styles,
+			});
+	
+			function employeeDataAjax() {
+				$.ajax({
+					url: "{% url 'fetch_emp_live_direction' %}",
+					dataType: "json",
+					method: "GET",
+					success: function (data) {
+						employeeMarker(data);
+						emp_live_loc = data;
+	
+					}
+				});
+			}
+			employeeDataAjax();
+
+	
+			var emplyMarkerArr = [];
+			var infowindows = [];
+			function employeeMarker(data) {
+				clearOverlays()
+				for (var i = 0; i < data.length; i++) {
+					var infowindow = new google.maps.InfoWindow();
+					marker = new google.maps.Marker({
+						position: { lat: Number(data[i]['lat']), lng: Number(data[i]['lng']) },
+						map,
+						icon: "{% static 'images/security-car.png' %}",
+						// animation: google.maps.Animation.DROP,
+						draggable: false,
+						zIndex: 0,
+						employee_id: data[i]['employee_id'],
+						username: data[i]['username'],
+					});
+	
+					
+	
+					emplyMarkerArr.push(marker);
+					infowindows.push(infowindow);
+					newLatlng = new google.maps.LatLng(Number(data[i]['lat']), Number(data[i]['lng']));
+					marker.setPosition(newLatlng);
+	
+	
+	
+					const contentString =
+						'<div>' +
+						'<div><span class="fw-bold mb-2 fs-6">Employee Id: </span><span>' + marker.get("employee_id") + '</span></div>' +
+						'<div><span class="fw-bold mt-2 fs-6">Username: </span><span>' + marker.get("username") + '</span></div>' +
+						'</div>';
+					infowindows[i].setContent(contentString);
+
+          
+		  (function (emplyMarkerArr, infowindows, i) {
+			 $(document).on("click", "#labelEnableBtn", function(){
+		
+			   for(var i=0;i<emplyMarkerArr.length;i++){
+			
+				emplyMarkerArr[i].setVisible(true);
+						 // infowindows[i].setContent(contentString);
+				   if ($('input#labelEnableBtn').is(':checked')) {
+					 infowindows[i].open(map, emplyMarkerArr[i]);
+				   }else{
+					 infowindows[i].close();
+				   }
+			   }
+			 });
+		   })(emplyMarkerArr, infowindows, i);
+ 
+ 
+	 google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	  return function() {
+		  infowindow.setContent(contentString);
+		  infowindow.open(map, marker);
+	  }
+	 })(marker, i));
+ 
+	 }
+ 
+	 function clearOverlays() {
+	   for (var i=0;i<emplyMarkerArr.length;i++) {
+		 emplyMarkerArr[i].setMap(null);
+	   }
+	   emplyMarkerArr.length = 0;
+	 }
+ 
+	 for(var i=0;i<emplyMarkerArr.length;i++){
+		emplyMarkerArr[i].setVisible(true);
+			   // infowindows[i].setContent(contentString);
+		 if ($('input#labelEnableBtn').is(':checked')) {
+		   infowindows[i].open(map, emplyMarkerArr[i]);
+		 }
+	 }
+			}
+		
+			setInterval(function () {
+				employeeDataAjax();
+			}, 25000);
+
+	
+			function targetLocation() {
+				const mapCenter = { lat: -37.81752848072373, lng: 144.95798208365622 };
+				const draggableMarker = new google.maps.Marker({
+					position: mapCenter,
+					map,
+					icon: "{% static 'images/marker.png' %}",
+					animation: google.maps.Animation.DROP,
+					draggable: true,
+					title: "Drag me!",
+					zIndex: 20
+				});
+				var circle = new google.maps.Circle({
+					map: map,
+					radius: 400,
+					fillColor: '#d1000042',
+					strokeColor: '#d1000073',
+					clickable: true,
+				});
+				circle.setVisible(false)
+				circle.bindTo('center', draggableMarker, 'position');
+				draggableMarker.setVisible(false);
+	
+				google.maps.event.addListener(draggableMarker, 'dragend', function (event) {
+					createMap(event.latLng);
+				});
+				function createMap(latLng) {
+					empDistList = [];
+					getAddress(latLng);
+					draggableMarker.setPosition(latLng);
+					draggableMarker.setVisible(true);
+					circle.setVisible(true);
+					var target_data = [{
+						'lat': latLng.lat(),
+						'lng': latLng.lng()
+					}];
+					for (var j = 0; j < emp_live_loc.length; j++) {
+						calculateDistance(emp_live_loc, target_data, j);
+					}
+					// for(j=0;j<cars.length;j++){
+					//   calculateDistance(cars[j].getPosition().lat(),cars[j].getPosition().lng(), latLng.lat(), latLng.lng())
+					// }
+					setLatlngText(latLng.lat(), latLng.lng());
+				}
+				google.maps.event.addListener(map, 'click', function (event) {
+					createMap(event.latLng);
+				});
+	
+				google.maps.event.addListener(circle, 'click', function (event) {
+					createMap(event.latLng);
+				});
+				var geocoder = new google.maps.Geocoder();
+				function getAddress(latlng) {
+					geocoder.geocode({
+						'latLng': latlng
+					}, function (results, status) {
+						if (status == google.maps.GeocoderStatus.OK) {
+							if (results[1]) {
+								console.log(results[1])
+								document.querySelector("#autocomplete_adds").value = results[1]['formatted_address'];
+								document.querySelector("#job_address").value = results[1]['formatted_address'];
+								// here assign the data to asp lables
+								// document.getElementById('<%=addressStandNo.ClientID %>').value = results[1].formatted_address;
+							} else {
+								alert('No results found');
+							}
+						} else {
+							alert('Geocoder failed due to: ' + status);
+						}
+					});
+				}
+				function setLatlngText(lat, lng) {
+					document.querySelector("#assign-lat").value = lat;
+					document.querySelector("#assign-lng").value = lng;
+					document.querySelector(".latdis").textContent = lat;
+					document.querySelector(".lngdis").textContent = lng;
+				}
+				document.querySelector("#job_address").onclick = function () {
+					this.select();
+				}
+				var z = 0;
+				function calculateDistance(emp_data, target_data, count) {
+					console.log("count:" + count)
+					var securityPos = [new google.maps.LatLng(emp_data[count]['lat'], emp_data[count]['lng'])];
+					var destination = [new google.maps.LatLng(target_data[0]['lat'], target_data[0]['lng'])];
+					//   empDistArr = [];
+					//   var securityPos = [new google.maps.LatLng(securitypos1, securitypos2)];
+					//   var destination = [new google.maps.LatLng(despos1, despos2)];
+	
+					var service = new google.maps.DistanceMatrixService();
+					service.getDistanceMatrix({
+						origins: securityPos,
+						destinations: destination,
+						travelMode: 'DRIVING',
+					}, callback);
+	
+					function callback(response, status) {
+						var data = {
+							"employee_id": emp_data[count]['employee_id'],
+							"username": emp_data[count]['username'],
+							"created_at": emp_data[count]['created_at'],
+							"lat": emp_data[count]['lat'],
+							"lng": emp_data[count]['lng'],
+							"distance": response.rows[0].elements[0].distance.text,
+							"dmeter": response.rows[0].elements[0].distance.value,
+						}
+						empDistList.push(data);
+						// create_employee_table(empDistList, count)
+						// var empDistArr = [];
+						empDistList.sort(function (a, b) {
+							return a.dmeter - b.dmeter;
+						});
+						z++;
+						if (emp_data.length == z) {
+							updateEmpTable();
+							z = 0;
+						}
+						// See Parsing the Results for
+						// the basics of a callback function.
+					}
+	
+				}
+	
+				function autocompleteAdds() {
+					const input = document.getElementById("autocomplete_adds");
+	
+					const autocompleteopt = {
+						fields: ["formatted_address", "geometry", "name"],
+						// strictBounds: {
+						// 	latLngBounds: MAP_BOUNDS,
+						// 	strictBounds: false,
+						// },
+						types: ["establishment"],
+					};
+	
+					const autocomplete = new google.maps.places.Autocomplete(input, autocompleteopt);
+	
+					// Bind the map's bounds (viewport) property to the autocomplete object,
+					// so that the autocomplete requests use the current map bounds for the
+					// bounds option in the request.
+					autocomplete.bindTo("bounds", map);
+	
+	
+					autocomplete.addListener("place_changed", () => {
+						const place = autocomplete.getPlace();
+						var lat = place.geometry.location.lat();
+						var lng = place.geometry.location.lng();
+						if (!place.geometry || !place.geometry.location) {
+							// User entered the name of a Place that was not suggested and
+							// pressed the Enter key, or the Place Details request failed.
+							window.alert("No details available for input: '" + place.name + "'");
+							return;
+						}
+	
+						map.setCenter(place.geometry.location);
+	
+						draggableMarker.setPosition(place.geometry.location);
+						draggableMarker.setVisible(true);
+						circle.setVisible(true)
+						circle.bindTo('center', draggableMarker, 'position');
+						setLatlngText(lat, lng);
+						createMap(place.geometry.location);
+					});
+				}
+				autocompleteAdds();
+			}
+	
+			// $(document).on("click", "#show_tbl_emp", function(){
+			function updateEmpTable() {
+				$('.employee_table_body').empty();
+				for (var i = 0; i < empDistList.length; i++) {
+					$('<tr>' +
+						'<td>' + empDistList[i]['username'] + '</td>' +
+						'<td>' + empDistList[i]['lat'] + '</td>' +
+						'<td>' + empDistList[i]['lng'] + '</td>' +
+						'<td>' + empDistList[i]['distance'] + '</td>' +
+						'<td><div class="badge badge-soft-success font-size-12">Idle</div></td>' +
+						'<td><button class="btn btn-outline-primary btn-sm manual_assign_btn d-none" data-emp=' + empDistList[i]['employee_id'] + ' data-emp-username='+ empDistList[i]['username'] +'>Assign</button></td>' +
+						'</tr>').appendTo('.employee_table_body');
+				}
+			}
+			targetLocation();
+		}
+	
+	
+
+	
+		$(function () {
+	
+	
+			
+	
+		Pusher.logToConsole = true;
+		const pusher = new Pusher(
+		  "373f62164ae4652ef6c5", // Replace with 'key' from dashboard
+		  {
+			cluster: "ap4", // Replace with 'cluster' from dashboard
+			
+			authEndpoint: "{% url 'auth_pusher' %}"
+		  }
+		);
+	
+		
+	
+	
+			alertify.set('notifier', 'position', 'top-right');
+	
+			$("#job_form").on("submit", function (e) {
+				e.preventDefault();
+	
+				var dataString = $(this).serialize();
+				$('#update_job_btn i').removeClass('d-none')
+	
+				// alert(dataString); return false;
+	
+				$.ajax({
+					type: "POST",
+					url: "{% url 'update_job' %}",
+					data: dataString,
+					success: function (data) {
+						$('#update_job_btn i').addClass('d-none')
+						if (data.status == "1") {
+							alertify.success('job Updated Successfully ');
+							$('#job_id_hidden').val(data.id)
+							$('#assign_job_btn').removeClass('d-none')
+							$('.manual_assign_btn').removeClass('d-none')
+						}
+						else {
+							alertify.error('job Not Updated Successfully ');
+						}
+					},
+					error: function () {
+						$('#update_job_btn i').addClass('d-none')
+						alertify.error('job Not Updated Successfully ');
+					}
+				});
+			})
+	
+	
+			function getCookie(name) {
+				let cookieValue = null;
+				if (document.cookie && document.cookie !== '') {
+					const cookies = document.cookie.split(';');
+					for (let i = 0; i < cookies.length; i++) {
+						const cookie = cookies[i].trim();
+						// Does this cookie string begin with the name we want?
+						if (cookie.substring(0, name.length + 1) === (name + '=')) {
+							cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+							break;
+						}
+					}
+				}
+				return cookieValue;
+			}
+	
+			var IS_AUTO_JOB_RUNNING = false
+	
+			// AUTO ASSIGN STARTS
+			$(document).on('click', '#assign_job_btn', function () {
+				var job_id = $('#job_id_hidden').val()
+	
+				if (job_id == 0) {
+					alertify.error('Job Not Been Saved')
+					return false
+				}
+	
+				var csrftoken = getCookie('csrftoken');
+	
+				if($('.job_assign_log_div').hasClass('d-none')){
+					$('.job_assign_log_div').removeClass('d-none')
+				}
+				// $('.job_assign_log_div').toggleClass('d-none')
+				$('.job_assign_icon_rotate').addClass('rotate-icon')
+	
+				$('#abort_auto_assign_btn').removeClass('d-none')
+				IS_AUTO_JOB_RUNNING = true
+	
+				$.ajax({
+					url: "{% url 'job_pusher_trigger' %}",
+					dataType: "json",
+					method: "POST",
+					data: {
+						"emp_distance": JSON.stringify(empDistList),
+						csrfmiddlewaretoken: csrftoken,
+						'job_id': job_id
+					},
+					success: function (data) {
+						$('#job_logs_section').append('<p class="text-primary mb-2">Job Auto Assign Ended</p>')
+						$('.job_assign_icon_rotate').removeClass('rotate-icon')
+						$('#abort_auto_assign_btn').addClass('d-none')
+						IS_AUTO_JOB_RUNNING = false
+						
+					},
+					error: function () {
+						console.log('Not Great')
+						alertify.error("Something went wrong auto assign not worked")
+						IS_AUTO_JOB_RUNNING = false
+					}
+				});
+			})
+	
+			// ABORT AUTO ASSIGN
+			$('#abort_auto_assign_btn').click(function(){
+				$.ajax({
+					url: "{% url 'change_job_request_process' %}",
+					dataType: "json",
+					method: "GET",
+					success: function (data) {
+						if (data.status == "success") {
+							alertify.success('Auto Job request Aborted');
+						}
+					},
+					error: function () {
+						console.log('Something went wrong')
+					}
+				});
+			})
+	
+	
+			// MANUAL ASSIGN
+			function job_assign_trigger(emp_id, emp_username, job_id,type, csrftoken) {
+				$.ajax({
+					url: "{% url 'job_manual_assign' %}",
+					dataType: "json",
+					method: "POST",
+					data: {
+						"emp_id": emp_id,
+						csrfmiddlewaretoken: csrftoken,
+						'job_id': job_id,
+						'emp_username': emp_username
+					},
+					success: function (data) {
+						if (data.status == "success" && type=="manual") {
+							alertify.success('Job Sent to '+emp_username+' Successfully');
+						}
+						else {
+							alertify.error('Job Not Sent to '+ emp_username);
+						}
+					},
+					error: function () {
+						alertify.error('Job Not Sent Successfully ');
+					}
+				});
+			}
+	
+			$(document).on('click', '.manual_assign_btn', function () {
+				if(IS_AUTO_JOB_RUNNING == true){
+					alertify.error('Please Abort Auto job Assign first')
+					return false
+				}
+	
+				var csrftoken = getCookie('csrftoken');
+				var emp_id = $(this).attr('data-emp')
+				var emp_username = $(this).attr('data-emp-username')
+				// console.log(emp_id)
+	
+				var job_id = $('#job_id_hidden').val()
+	
+				if (job_id == 0) {
+					alertify.error('Job Not Been Saved')
+					return false
+				}
+	
+				job_assign_trigger(emp_id, emp_username, job_id,"manual",csrftoken)
+			})
+	
+			//// PUSHER TRIGGER EVENT //////
+			const channel = pusher.subscribe('private-admin{{ request.user.username }}-channel');
+			channel.bind("job_request_feedback", (data) => {
+				console.log("TRIGGER ",data)
+				$('#job_logs_section').append('<p class="text-'+ data.type +' mb-2">'+ data.message +'</p>')
+			});
+	
+		});
+	
+	</script>
+
+<script>
+	setInterval(showTime, 1000);
+	function showTime() {
+		let time = new Date();
+		let hour = time.getHours();
+		let min = time.getMinutes();
+		let sec = time.getSeconds();
+		am_pm = "AM";
+
+		if (hour > 12) {
+			hour -= 12;
+			am_pm = "PM";
+		}
+		if (hour == 0) {
+			hr = 12;
+			am_pm = "AM";
+		}
+
+		hour = hour < 10 ? "0" + hour : hour;
+		min = min < 10 ? "0" + min : min;
+		sec = sec < 10 ? "0" + sec : sec;
+
+		let currentTime = hour + ":" 
+			+ min + ":" + sec + am_pm;
+
+		document.getElementById("clock")
+			.innerHTML = currentTime;
+	}
+
+	showTime();
+</script>
+
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&callback=initMap&libraries=places"></script>
+</body>
+</html>
