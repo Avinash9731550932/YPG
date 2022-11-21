@@ -186,6 +186,6 @@ IMPORT_EXPORT_USE_TRANSACTIONS = True
 SITE_URL = "https://ypgsecurity.com/"
 
 # GOOGLE MAPS
-GOOGLE_MAPS_API_KEY = "AIzaSyAbS2u-NguQ-xBRu_L-AzAf_rDn1hdZbfU"
+GOOGLE_MAPS_API_KEY = ""
 
 "
