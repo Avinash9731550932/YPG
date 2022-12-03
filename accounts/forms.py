@@ -59,7 +59,7 @@ class EmployeeProfileForm(forms.ModelForm):
                                 'class': 'form-control',
                                 'rows':'3',
                             }))
-    phone_number    = forms.CharField(required=False,max_length=20, widget = forms.TextInput(attrs={ 'class': 'form-control'}))
+   
     driving_license = forms.CharField(required=False,max_length=30, widget = forms.TextInput(attrs={ 'class': 'form-control'}), label="Driving License No")
     security_license = forms.CharField(required=False,max_length=30, widget = forms.TextInput(attrs={ 'class': 'form-control'}), label="Security License No")
     profile_picture = forms.ImageField(required=False, help_text="*Keep Blank if you want to keep old picture. Choose <2MB image size", error_messages = {'invalid':{"Image Files Only"}}, widget=forms.FileInput(attrs={ 'class': 'form-control'}))
